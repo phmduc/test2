@@ -1,0 +1,256 @@
+html,
+body {
+  min-height: 100vh;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.quizzWrap {
+  background: url("./assest/img/—Pngtree—technology\ triangle\ cover_3216022.png")
+    #5eacc0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.quizzWrap .top .logo i {
+  font-size: 2rem;
+  color: white;
+}
+.quizzWrap .top .logo {
+  background-color: #f27777;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.quizzWrap .top .time {
+  background-color: #0093e9;
+  background-image: linear-gradient(90deg, #0093e9 0%, #80d0c7 73%);
+  padding: 0.6rem;
+  border-radius: 50px;
+  max-width: 20.7%;
+}
+.quizzWrap .top .time i {
+  font-size: 2.5rem;
+  margin-right: 0.3rem;
+}
+.quizzWrap .top .time > span {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #081b4b;
+}
+.quizzWrap .top .time .second {
+  background-color: white;
+  padding: 0.3rem 1.8rem;
+  border-radius: 50px;
+  line-height: 1.4rem;
+}
+.quizzWrap .top .time .second span:first-child {
+  color: #081b4b;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.quizzWrap .top .time .second span:last-child {
+  color: rgb(160, 159, 159);
+  font-weight: bold;
+}
+.quizzWrap .quizzBox {
+  background: url("./assest/img/—Pngtree—chinese\ style\ ink\ painting\ far_3916629.png")
+    #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  width: 70%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.quizzWrap .quizzBox .title span {
+  color: #081b4b;
+  font-weight: bold;
+}
+.quizzWrap .quizzBox .title h3 {
+  text-transform: uppercase;
+
+  font-weight: bold;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #0093e9 0%, #80d0c7 73%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.quizzWrap .quizzBox .prog .number {
+  color: #081b4b;
+  font-weight: bold;
+}
+.quizzWrap .quizzBox .prog .range {
+  height: 15px;
+  position: relative;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.quizzWrap .quizzBox .prog .range::before {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.3s linear;
+  width: var(--percent);
+  height: 100%;
+  background-color: #0093e9;
+  background-image: linear-gradient(270deg, #0093e9 0%, #80d0c7 73%);
+}
+.quizzWrap .quizzBox .list .question {
+  color: #081b4b;
+}
+.quizzWrap .quizzBox .list .question.show {
+  display: block;
+}
+.quizzWrap .quizzBox li {
+  list-style-type: none;
+}
+.quizzWrap .quizzBox li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.quizzWrap .quizzBox .answer {
+  flex-direction: row-reverse;
+  justify-content: start;
+  display: inline-block;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  padding: 0.8rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgb(243, 242, 242);
+}
+.quizzWrap .quizzBox .answer span,
+.quizzWrap .quizzBox .answer input {
+  z-index: 2;
+}
+.quizzWrap .quizzBox .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+
+  width: 100%;
+  background-color: rgb(218, 216, 216);
+}
+.quizzWrap .quizzBox .listanswer {
+  padding: 0;
+  width: 70%;
+}
+.quizzWrap .quizzBox .answer .answerContent {
+  margin-bottom: 0;
+  color: #081b4b;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.quizzWrap .quizzBox .checkmark {
+  min-width: 30px;
+  height: 30px;
+  background-color: #0093e9;
+  background-image: linear-gradient(180deg, #0093e9 0%, #80d0c7 73%);
+  margin-right: 1rem;
+  border-radius: 100%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 30px;
+  width: 15px;
+  height: 22px;
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  transform: translate(10%, -70%) rotate(45deg);
+}
+
+input:checked ~ .checkmark:after {
+  display: block;
+}
+.quizzWrap .quizzBox .answer:hover .checkmark:after {
+  display: block;
+}
+input:checked ~ .bg {
+  z-index: 1 !important;
+}
+.quizzWrap .controls {
+  gap: 1rem;
+}
+
+.quizzWrap .controls button {
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 0.7rem 1rem;
+  box-shadow: unset;
+}
+.quizzWrap .controls button:hover {
+  opacity: 0.8;
+}
+.quizzWrap .controls .next,
+.quizzWrap .controls .submit {
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+.quizzWrap .controls .previous {
+  background-color: black;
+}
+
+.thankyou {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+.thankyou .img {
+  width: 30%;
+  margin: 0 auto;
+}
+.thankyou button {
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  color: white;
+}
+.table th,
+.table td {
+  border-top: none;
+}
+
+@media screen and (max-width: 991px) {
+  .quizzWrap .top .time {
+    max-width: unset;
+    gap: 0.5rem;
+  }
+  .quizzWrap .quizzBox {
+    width: 100%;
+  }
+  .quizzWrap .quizzBox .list .question h3 {
+    font-size: 1.4rem;
+  }
+  .quizzWrap .quizzBox .answer .answerContent {
+    font-size: 1rem;
+  }
+  .quizzWrap .quizzBox .listanswer {
+    width: 100%;
+  }
+  .quizzWrap .controls button {
+    width: calc(100% - 1rem);
+  }
+  .quizzWrap .controls {
+    flex-wrap: wrap;
+  }
+  .quizzWrap .quizzBox .title h3 {
+    font-size: 2rem;
+  }
+}
