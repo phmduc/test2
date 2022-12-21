@@ -99,10 +99,12 @@ body {
   background-color: #0093e9;
   background-image: linear-gradient(270deg, #0093e9 0%, #80d0c7 73%);
 }
-.quizzWrap .quizzBox .list .question {
+.quizzWrap .quizzBox .questionWrap .question {
+}
+.quizzWrap .quizzBox .questionWrap .question h3 {
   color: #081b4b;
 }
-.quizzWrap .quizzBox .list .question.show {
+.quizzWrap .quizzBox .questionWrap .question.show {
   display: block;
 }
 .quizzWrap .quizzBox li {
@@ -226,6 +228,10 @@ input:checked ~ .bg {
 .table td {
   border-top: none;
 }
+.modal-body {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
 
 @media screen and (max-width: 991px) {
   .quizzWrap .top .time {
@@ -235,7 +241,7 @@ input:checked ~ .bg {
   .quizzWrap .quizzBox {
     width: 100%;
   }
-  .quizzWrap .quizzBox .list .question h3 {
+  .quizzWrap .quizzBox .questionWrap .question h3 {
     font-size: 1.4rem;
   }
   .quizzWrap .quizzBox .answer .answerContent {

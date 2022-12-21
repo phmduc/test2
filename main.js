@@ -29,6 +29,18 @@ let questionList = [
     options: ["123", "235", "567", "789"],
     answer: "",
   },
+  {
+    question:
+      "Characterized by skill at understanding and profiting by circumstances",
+    options: ["123", "235", "567", "789"],
+    answer: "",
+  },
+  {
+    question:
+      "Characterized by skill at understanding and profiting by circumstances",
+    options: ["123", "235", "567", "789"],
+    answer: "",
+  },
 ];
 const total = questionList.length;
 let currentQuest = 0;
